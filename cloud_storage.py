@@ -60,5 +60,5 @@ def run_schedule():
         schedule.run_pending()
         time.sleep(60)  # 每分钟检查一次
 if __name__ == '__main__':
-    app.run(port=10000,debug=True)
+    app.run(host='0.0.0.0',port=10000,debug=True)
     threading.Thread(target=run_schedule,daemon=True).start()
